@@ -4,6 +4,6 @@ const signalValue = document.getElementById('socketValue');
 const tempValue = '';
 document.getElementById('signal').addEventListener('click', () => {
   if (socket.readyState) {
-    socket.send(`${signalValue.value}\n${tempValue}`)
+    socket.send(`${signalValue.value}\r\n${tempValue}`)
   }
 });
