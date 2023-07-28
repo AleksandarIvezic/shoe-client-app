@@ -8,20 +8,19 @@
   </head>
   <body>
     <input
-      id="socketValue"
+      id="gssSignalValue"
       type="text"
-      name="socketValue"
+      name="gssSignalValue"
       placeholder="enter signal value"
     />
     <button id="signal">Send signal</button> <br />
     <br /><br />
     <br />
-    <h2>Card -> Signal Coverter</h2>
-    <h3>Card:</h3>
-    <input id="card" type="text" name="card" placeholder="Card" />
-    <button id="convert">Convert</button>
+    <h2>Card &rarr; Signal Converter</h2>
+    <h3 style="display: inline;">Card:</h3>
+    <select style="margin-right: 10px;" id="card" type="select" name="card" ></select>
 
-    <h3 id="displaySignal">Signal:</h3>
+    <h3 style="display: inline;" id="displaySignal">Signal:</h3>
     <script src="main.js"></script>
   </body>
 </html>
