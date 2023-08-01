@@ -1,5 +1,5 @@
 const socket = new WebSocket('ws://localhost:8080/');
-const signalValue = document.getElementById('socketValue');
+const signalValue = document.getElementById('gssSignalValue');
 const tempValue = '';
 document.getElementById('signal').addEventListener('click', () => {
   if (socket.readyState) {
@@ -31,7 +31,6 @@ const RANK_VALUES = [
   { shoeCode: 'D', gssCode: 'K', label: 'King' },
 ];
 
-const gssInput = document.getElementById('gssSignalValue');
 const signalElement = document.getElementById('displaySignal');
 const submitButtonElement = document.getElementById('convert');
 const cardSelect = document.getElementById('card');
@@ -58,7 +57,7 @@ cardOptions.forEach((cardOption) => {
 });
 cardSelect.addEventListener('change', () => {
   defaultOption.disabled = true;
-  gssInput.value = getSignal(cardSelect.value);
+  signalValue.value = getSignal(cardSelect.value);
 });
 
 const getSignal = (card) => {
